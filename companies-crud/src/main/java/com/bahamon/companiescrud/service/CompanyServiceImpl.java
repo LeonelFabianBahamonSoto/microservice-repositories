@@ -5,16 +5,13 @@ import com.bahamon.companiescrud.entity.Company;
 import com.bahamon.companiescrud.repository.CompanyRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
 import java.util.Objects;
-import java.util.Optional;
 
 @Service
 @Transactional
-@Slf4j
 @AllArgsConstructor
 public class CompanyServiceImpl implements CompanyService {
 

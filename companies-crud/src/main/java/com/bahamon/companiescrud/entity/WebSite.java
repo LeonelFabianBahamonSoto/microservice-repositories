@@ -1,6 +1,5 @@
 package com.bahamon.companiescrud.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
 

@@ -5,9 +5,6 @@ spring:
     active: dev
   cloud:
     config:
-      # PARA ENTORNO DE PRODUCCION
-#      uri: http://config-server.ns-colombo.svc.cluster.local:8888
-      # PARA ENTORNO DE DESARROLLO
       uri: http://localhost:8888
       fail-fast: true
       retry:
