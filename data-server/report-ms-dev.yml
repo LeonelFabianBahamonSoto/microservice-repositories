@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: report-ms
+
+server:
+  port: 7070
+  servlet:
+    context-path: /report
+
+eureka:
+  instance:
+    instance-id: "${spring.application.name}:${random.value}"
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
