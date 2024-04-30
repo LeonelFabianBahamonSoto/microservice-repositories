@@ -7,10 +7,16 @@ spring:
         config:
             server:
                 git:
-                    uri: https://github.com/LeonelFabianBahamonSoto/ms-companies/tree/main/data-server.git
-                    username: LeonelFabianBahamonSoto
-                    # clone-on-start: true
-                    # defaultLabel: main
+                    uri: https://github.com/LeonelFabianBahamonSoto/ms-companies.git
+                    default-label: main
+                    clone-on-start: true
 
 server:
     port: 8888
+
+eureka:
+    instance:
+        instance-id: "${spring.application.name}:${random.value}"
+    client:
+        service-url:
+            defaultZone: http://localhost:8761/eureka/
