@@ -1,0 +1,16 @@
+spring:
+    application:
+        name: config-server
+    profiles:
+        active: default
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://github.com/LeonelFabianBahamonSoto/ms-companies/tree/main/data-server.git
+                    username: LeonelFabianBahamonSoto
+                    # clone-on-start: true
+                    # defaultLabel: main
+
+server:
+    port: 8888
