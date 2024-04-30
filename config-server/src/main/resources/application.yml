@@ -13,11 +13,10 @@ spring:
                     uri: https://github.com/LeonelFabianBahamonSoto/microservice-repositories.git
                     searchPaths: data-server
                     username: LeonelFabianBahamonSoto
+                    password: ${PASSWORD_REPOSITORY}
                     repos:
                         team-a:
-                            pattern: team-a-*
                             cloneOnStart: true
-                            uri: https://github.com/LeonelFabianBahamonSoto/microservice-repositories.git
+                            pattern: team-a-fabianBahamonSoto
                             searchPaths: data-server
-                    # clone-on-start: true
-                    # default-label: main
+                            uri: https://github.com/LeonelFabianBahamonSoto/microservice-repositories.git
