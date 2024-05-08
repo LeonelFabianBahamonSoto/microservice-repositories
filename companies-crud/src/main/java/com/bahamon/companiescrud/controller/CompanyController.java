@@ -3,6 +3,7 @@ package com.bahamon.companiescrud.controller;
 import com.bahamon.companiescrud.entity.Company;
 import com.bahamon.companiescrud.service.CompanyService;
 import lombok.AllArgsConstructor;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,8 +11,21 @@ import org.springframework.web.bind.annotation.*;
 @AllArgsConstructor
 @RestController
 @RequestMapping(path = "company")
-public class CompanyController {
+public class CompanyController
+{
     private final CompanyService companyService;
+
+    /*
+     * @autor Fabian Bahamon
+     * @Description Con este metodo busco implementar y probar el Scheduler.
+    */
+    @GetMapping( path = "/Scheduling")
+    public ResponseEntity<Company> SchedulingTask() {
+
+        companyService.SchedulingTaskProcess();
+
+        return ResponseEntity.noContent().build();
+    }
 
     @GetMapping( path = "/getCompany/{name}")
     public ResponseEntity<Company> getCompany( @PathVariable String name ) {

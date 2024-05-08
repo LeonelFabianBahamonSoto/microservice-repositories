@@ -10,4 +10,6 @@ public interface CompanyService {
     Company updateCompany( Company company, String name );
 
     void deleteCompany( String name );
+
+    void SchedulingTaskProcess();
 }
