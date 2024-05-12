@@ -4,28 +4,26 @@ import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 @Configuration
 public class GatewayBeans {
 
     @Bean
+    @Profile( value = "eureka-off" )
     public RouteLocator routeLocator( RouteLocatorBuilder builder )
     {
-        RouteLocator gatewayBuilder = builder
-            .routes()
-            .route(
-                route -> route
-                    .path("/companies/company/*")
-                    .uri("http://localhost:8081")
+        return builder.routes()
+            .route(route -> route
+                .path("/companies-crud/company/*")
+                .uri("http://localhost:8081")
             )
             .route(
-            route -> route
-                .path("/report/*")
-                .uri("http://localhost:7070")
-        )
-            .build();
-
-        return gatewayBuilder;
+                route -> route
+                    .path("/report/*")
+                    .uri("http://localhost:7070")
+            )
+                .build();
     };
 
 }
