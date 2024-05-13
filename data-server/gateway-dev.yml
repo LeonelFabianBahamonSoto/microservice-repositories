@@ -5,11 +5,11 @@ spring:
   application:
     name: gateway
   profiles:
-    default: eureka-on
+    default: eureka-off
 
 eureka:
   client:
-    fetch-registry: true
+    fetch-registry: false
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
