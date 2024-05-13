@@ -18,12 +18,12 @@ import com.bahamon.reportms.models.Company;
 public interface CompaniesRepository {
 
     // @GetMapping( path = "http://localhost:8081/companies/company/getCompany/{name}")
-    @GetMapping( path = "/companiescrud/companies/company/getCompany/{name}")
+    @GetMapping( path = "/company/getCompany/{name}")
     Optional<Company> getByName( @PathVariable String name );
 
-    @PostMapping( path = "/companiescrud/companies/company/createCompany")
+    @PostMapping( path = "/company/createCompany")
     Optional<Company> postByName( @RequestBody Company company );
 
-    @DeleteMapping( path = "/companiescrud/companies/company/delete/{name}" )
+    @DeleteMapping( path = "/company/delete/{name}" )
     Optional<Company> deleteByName( @PathVariable String name );
 }

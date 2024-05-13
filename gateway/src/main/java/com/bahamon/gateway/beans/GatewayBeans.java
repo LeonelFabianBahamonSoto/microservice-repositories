@@ -14,10 +14,13 @@ public class GatewayBeans
     {
         return routeLocatorBuilder
                 .routes()
-                .route( route -> route.path("/companies-crud/company/*").uri("http://localhost:8081") )
                 .route(
                     route -> route
-                        .path("/report/*")
+                        .path("/company/**")
+                        .uri("http://localhost:8081") )
+                .route(
+                    route -> route
+                        .path("/report/**")
                         .uri("http://localhost:7070")
                 )
             .build();
