@@ -45,5 +45,3 @@ public class GatewayBeans
             .build();
     };
 }
-
-// .route("ws1", r -> r.path("/data1").uri("lb:ws://market.data/api"))
