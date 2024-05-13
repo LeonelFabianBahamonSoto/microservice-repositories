@@ -3,7 +3,8 @@ spring:
     name: report-ms
 
 server:
-  port: 7070
+  port: 0
+  # port: 7070
 
 eureka:
   instance:

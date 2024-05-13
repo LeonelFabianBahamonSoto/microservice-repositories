@@ -4,8 +4,8 @@ server:
 spring:
   application:
     name: gateway
-  # profiles:
-  #   default: eureka-on
+  profiles:
+    default: eureka-off
 
 eureka:
   client:
@@ -24,20 +24,3 @@ management:
     web:
       exposure:
         include: "*"
-
-# spring:
-#   application:
-#     name: ms-admin-api-gateway-server
-#   profiles:
-#     active: loc
-#   cloud:
-#     config:
-#       # PARA ENTORNO DE PRODUCCION
-# #      uri: http://ms-admin-config-server:8888
-#       # PARA ENTORNO DE DESARROLLO
-#       uri: http://localhost:8888
-#       fail-fast: true
-#       retry:
-#          max-attempts: 20
-#          max-interval: 15000
-#          initial-interval: 10000
